@@ -10,7 +10,7 @@ const ProcessCard = ({ icon, title, description, imageUrl, overlayColor }) => {
         backgroundPosition: 'center'
       }}
     >
-      {/* Content Overlay */}
+     
       <div className={`absolute inset-0 w-full h-full flex flex-col justify-center items-center text-center p-6 text-white transition-all duration-300 ${overlayColor}  z-10`}>
         <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
           {icon}
