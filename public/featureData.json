@@ -1,0 +1,48 @@
+[
+  {
+    "_id": 1,
+    "projectName": "ReviweHub",
+    "projectImage": "https://i.ibb.co.com/LB2sZMN/Screenshot-2025-08-20-160657.png",
+    "slogan": "A full-featured platform where users can create accounts, post and rate product reviews, vote, comment, access premium content, and make secure payments — all with admin moderation and control.",
+    "liveLink": "https://assignment-9-client-iota.vercel.app"
+  },
+  {
+    "_id": 2,
+    "projectName": "House Help Hub",
+    "projectImage": "https://i.ibb.co.com/n8Qctq9J/Screenshot-2025-08-20-161153.png",
+    "slogan": "House Help Hub (H.H.H) is your reliable partner for everyday tasks — whether you’re looking to offer your services or find trusted help for your home. ",
+    "liveLink": "https://house-help-hub.web.app"
+  },
+    {
+    "_id": 3,
+    "projectName": "The Daily Bulletin",
+    "projectImage": "https://i.ibb.co.com/7J0fR98r/the-dailybulletin.png",
+    "slogan": "A modern, full-stack newspaper platform with role-based access, payments, and dynamic dashboards.",
+    "liveLink": "https://daily-bulletin-96f27.web.app"
+  },
+    {
+    "_id": 4,
+    "projectName": "Book Galaxy",
+    "projectImage": "https://res.cloudinary.com/dgyjmusnm/image/upload/v1754942269/abumahid/Screenshot%202025-08-12%20014603.png.png",
+    "slogan": "Book Galaxy built with React, Firebase, and MongoDB. This project main theme CRUD operation with book related product.",
+    "liveLink": "https://book-galaxy-610c0.web.app"
+  },
+
+ 
+
+   {
+    "_id": 5,
+    "projectName": "Canvas Creations",
+    "projectImage": "https://i.ibb.co.com/7dHyfQTJ/Screenshot-2025-08-20-160401.png",
+    "slogan": "This project is a web application built with React, Firebase, and MongoDB. This project main theme CRUD operation with art related product.",
+    "liveLink": "https://canvas-creations.web.app/"
+  },
+
+  {
+    "_id": 6,
+    "projectName": "WorkLynx",
+    "projectImage": "https://i.ibb.co.com/zTsMFctW/Screenshot-2025-08-13-130839.png",
+    "slogan": "WorkLynx is a dynamic freelance task marketplace designed to bridge the gap between clients and freelancers.",
+    "liveLink": "https://work-lynx.firebaseapp.com"
+  }
+]
