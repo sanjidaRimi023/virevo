@@ -1,27 +1,26 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router";
+import { Link as ScrollLink } from "react-scroll";
+import { Menu, X } from "lucide-react"; // Hamburger & close icon
 import logo from "../../../assets/logo-bgremove.png";
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Work", path: "/work" },
-    { name: "Skills", path: "/skills" },
-    { name: "Testimonials", path: "/testimonials" },
+    { name: "Home", path: "home" },
+    { name: "Services", path: "services" },
+    { name: "Work", path: "work" },
+    { name: "Skills", path: "skills" },
+    { name: "Testimonials", path: "testimonials" },
   ];
 
   return (
@@ -31,26 +30,66 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-6">
+        {/* Logo */}
         <div>
           <img src={logo} alt="virevo logo" className="w-20" />
         </div>
-        <ul className="flex gap-6 uppercase">
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6 uppercase cursor-pointer">
           {navItems.map((item, idx) => (
             <li key={idx}>
-              <NavLink
+              <ScrollLink
                 to={item.path}
-                className={({ isActive }) =>
-                  `${
-                    scrolled ? "text-black" : "text-white"
-                  } hover:text-yellow-500 ${isActive ? "text-yellow-500" : ""}`
-                }
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={600}
+                activeClass="text-yellow-500"
+                className={`${
+                  scrolled ? "text-black" : "text-white"
+                } hover:text-yellow-500 transition-colors duration-300`}
               >
                 {item.name}
-              </NavLink>
+              </ScrollLink>
             </li>
           ))}
         </ul>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-black"
+          >
+            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-white shadow-md">
+          <ul className="flex flex-col gap-4 uppercase p-6">
+            {navItems.map((item, idx) => (
+              <li key={idx}>
+                <ScrollLink
+                  to={item.path}
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={600}
+                  onClick={() => setMobileOpen(false)}
+                  activeClass="text-yellow-500"
+                  className="text-black hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
+                >
+                  {item.name}
+                </ScrollLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

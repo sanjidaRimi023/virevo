@@ -41,7 +41,7 @@ const Services = () => {
   ];
   return (
     <>
-      <section className="container mx-auto">
+      <section className="container mx-auto px-4 lg:px-0">
         <div className="flex flex-col items-center space-y-1.5 justify-center my-20">
           <h2 className="text-2xl md:text-4xl font-bold">Our Services</h2>
           <p className="w-1/2 text-center text-gray-600">
