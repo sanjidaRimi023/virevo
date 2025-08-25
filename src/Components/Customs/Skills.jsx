@@ -18,7 +18,7 @@ const SkillBar = ({ name, percent, color }) => (
     >
       <Line
         percent={percent}
-        strokeWidth={1.5}
+        strokeWidth={1}
         strokeColor={color}
         trailWidth={1.5}
         strokeLinecap="round"

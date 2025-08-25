@@ -6,6 +6,9 @@ import Process from "../Components/Customs/Process";
 import { Element } from "react-scroll";
 import Skills from "../Components/Customs/Skills";
 import QuoteSection from "../Components/Customs/QuoteSection";
+import Testimonials from "../Components/Testimonials";
+
+
 
 const Home = () => {
   return (
@@ -24,6 +27,10 @@ const Home = () => {
       <Element name="skills" id="skills">
         <Skills />
       </Element>
+      <Element name="testimonials" id="testimonials">
+<Testimonials/>
+      </Element>
+
     </>
   );
 };
